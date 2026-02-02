@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Wedner Events and Production</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+  /* 🔹 UNIVERSAL STYLE IMPROVEMENTS */
+  section {
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 8%;
+  }
+
+  section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+  }
+
+  /* 🔹 ATTRACTIVE PAGE HEADER */
+  .page-header {
+    height: 70vh;
+    background: url('img/Gallery/2.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .page-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+  }
+
+  .page-header-content {
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  .page-header h1 {
+    font-size: 4rem;
+    background: linear-gradient(135deg, #ffce00, #ff2cdf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* 🔹 STORY SECTION - cinematic */
+  .story-section {
+    background: url('img/Gallery/5.jpg') center/cover fixed no-repeat;
+  }
+
+  .story-section::before {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85));
+  }
+
+  .story-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .story-content {
+    flex: 1 1 50%;
+    color: white;
+  }
+
+  .story-content h2 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #ffce00, #ff2cdf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .story-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+  }
+
+  .story-image {
+    flex: 1 1 45%;
+    position: relative;
+  }
+
+  .story-image img {
+    width: 100%;
+    border-radius: 20px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+  }
+
+  .story-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(255, 206, 0, 0.3);
+  }
+
+  /* 🔹 MISSION-VISION SECTION */
+  .mission-vision {
+    background: url('img/Gallery/4.jpg') center/cover fixed no-repeat;
+  }
+
+  .mission-vision::before {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
+  }
+
+  .mv-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .mv-card {
+    flex: 1 1 350px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    transition: 0.4s ease;
+  }
+
+  .mv-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(255, 206, 0, 0.3);
+  }
+
+  .mv-icon {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #ffce00, #ff2cdf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+
+  .mv-card h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .mv-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+  }
+
+  /* 🌟 Values Section */
+  .values-section {
+    position: relative;
+    padding: 6rem 8%;
+    background:
+      linear-gradient(135deg, rgba(10, 10, 20, 0.7), rgba(0, 0, 0, 0.8)),
+      url('img/Gallery/8.jpg') center center/cover no-repeat;
+    /* ✅ Change image as needed */
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  /* Subtle moving gradient effect (optional) */
+  .values-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(223, 234, 10, 0.15), transparent 70%);
+    animation: floatGlow 10s infinite alternate ease-in-out;
+    z-index: 1;
+    opacity: 0.6;
+  }
+
+  @keyframes floatGlow {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    100% {
+      transform: translate(-10%, -10%);
+    }
+  }
+
+  /* Section Title */
+  .values-section .section-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+  }
+
+  .values-section .section-title h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #dfea0a, #ff00ff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .values-section .section-title p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+  }
+
+  /* Values Grid */
+  .values-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+
+  /* Value Cards */
+  .value-card {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(223, 234, 10, 0.1);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  .value-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary, #dfea0a);
+    box-shadow: 0 15px 40px rgba(223, 234, 10, 0.25);
+  }
+
+  /* Icons */
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary, #dfea0a);
+    text-shadow: 0 0 20px rgba(223, 234, 10, 0.6);
+    transition: all 0.3s ease;
+  }
+
+  .value-card:hover .value-icon {
+    transform: scale(1.2) rotate(8deg);
+    color: #ffd700;
+  }
+
+  /* Headings and Paragraphs */
+  .value-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .value-card p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .values-section {
+      padding: 4rem 5%;
+    }
+
+    .values-section .section-title h2 {
+      font-size: 2.5rem;
+    }
+
+    .value-card {
+      padding: 2rem;
+    }
+  }
+</style>
+
+<body>
+  <div class="bg-animation"></div>
+  <div class="particles" id="particles"></div>
+
+  <header id="header">
+    <div class="header-container">
+      <!-- Logo + Name -->
+      <a href="index.html" class="logo">
+        <img src="img/testimonials/logo.png" alt="Wedner Events & Production Logo" class="logo-img">
+        <span class="logo-text">Wedner Events & Production</span>
+      </a>
+
+
+
+      <!-- Navigation -->
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="team.html">Team</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Icon -->
+      <i class="fas fa-bars menu-icon" id="menuIcon"></i>
+    </div>
+  </header>
+
+
+  <section class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="page-header-content">
+      <h1>About Wedner Productions</h1>
+      <p>Crafting Memories, Creating Magic Since 2015</p>
+    </div>
+  </section>
+
+
+  <section class="story-section">
+    <div class="story-overlay"></div>
+    <div class="story-container">
+      <div class="story-content">
+        <h2>Our Story</h2>
+        <p>Founded in 2015, Wedner Events & Production emerged from a passion for creating extraordinary experiences.
+          What started as a small team of dedicated professionals has grown into one of the most trusted names in event
+          management.</p>
+        <p>Over the past 10 years, we've orchestrated more than 500 memorable events, from intimate celebrations to
+          grand corporate gatherings. Our journey has been marked by innovation, creativity, and an unwavering
+          commitment to excellence.</p>
+        <p>Today, we stand proud as industry leaders, consistently delivering events that exceed expectations and create
+          lasting impressions.</p>
+      </div>
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800" alt="Our Story">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mission-vision">
+    <div class="mv-overlay"></div>
+    <div class="mv-container">
+      <div class="mv-card">
+        <i class="fas fa-bullseye mv-icon"></i>
+        <h3>Our Mission</h3>
+        <p>To transform visions into reality by delivering exceptional event experiences that inspire, engage, and leave
+          lasting impressions. We are committed to providing innovative solutions, meticulous planning, and flawless
+          execution for every event we undertake.</p>
+      </div>
+      <div class="mv-card">
+        <i class="fas fa-eye mv-icon"></i>
+        <h3>Our Vision</h3>
+        <p>To be the premier event management company recognized globally for creativity, excellence, and innovation. We
+          aspire to set new standards in the industry while creating unforgettable moments that bring people together
+          and celebrate life's special occasions.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="values-section">
+    <div class="section-title">
+      <h2>Our Core Values</h2>
+      <p>The Principles That Guide Everything We Do</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <i class="fas fa-star value-icon"></i>
+        <h3>Excellence</h3>
+        <p>We strive for perfection in every detail, ensuring exceptional quality in all our services.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-lightbulb value-icon"></i>
+        <h3>Innovation</h3>
+        <p>We embrace creativity and cutting-edge solutions to deliver unique and memorable experiences.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-handshake value-icon"></i>
+        <h3>Integrity</h3>
+        <p>We build trust through honest communication and transparent business practices.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-heart value-icon"></i>
+        <h3>Passion</h3>
+        <p>Our love for creating magical moments drives us to go above and beyond for every client.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="timeline-section">
+    <div class="section-title">
+      <h2>Our Journey</h2>
+      <p>Milestones That Shaped Our Success</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2015</div>
+          <h3>The Beginning</h3>
+          <p>Wedner Events was founded with a vision to revolutionize event management in the region.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2017</div>
+          <h3>Major Expansion</h3>
+          <p>Expanded our team and services, adding corporate events and fashion shows to our portfolio.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2019</div>
+          <h3>Industry Recognition</h3>
+          <p>Received multiple awards for excellence in event management and client satisfaction.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2023</div>
+          <h3>Digital Innovation</h3>
+          <p>Successfully adapted to virtual and hybrid events, setting new industry standards.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2025</div>
+          <h3>Milestone Achievement</h3>
+          <p>Celebrating 15 years of excellence with 500+ successful events and 1000+ happy clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Wedner Events</h3>
+        <p>Creating unforgettable moments since 2010</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p>
+          <a href="/" style="color: #f7f9fb; text-decoration: none; margin: 0 10px;">Home</a> |
+          <a href="/services.html" style="color: #f7f8f9; text-decoration: none; margin: 0 10px;">Services</a> |
+          <a href="/gallery.html" style="color: #f0f2f5; text-decoration: none; margin: 0 10px;">Gallery</a> |
+          <a href="/contact.html" style="color: #f1f3f5; text-decoration: none; margin: 0 10px;">Contact</a>
+        </p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/p/Wedner-Events-Production-100047288066072/" class="social-icon"
+            target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/wedner_events_production/" class="social-icon" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/9156161444" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:wednerevents@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2025 Wedner Events & Production. All Rights Reserved.</p>
+  </footer>
+
+  <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+</body>
+
+</html>
+<script>
+
+  // Particles
+  const particlesContainer = document.getElementById('particles');
+  for (let i = 0; i < 50; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 20 + 's';
+    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+    particlesContainer.appendChild(particle);
+  }
+
+  // Mobile Menu
+  const menuIcon = document.getElementById('menuIcon');
+  const nav = document.getElementById('nav');
+  menuIcon.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
+
+  // Header Scroll Effect
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // Stats Counter
+  function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        element.textContent = Math.floor(current) + '+';
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target + '+';
+      }
+    };
+    updateCounter();
+  }
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-number').forEach(stat => {
+    statsObserver.observe(stat);
+  });
+
+  // Scroll to Top
+  const scrollTop = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollTop.classList.add('show');
+    } else {
+      scrollTop.classList.remove('show');
+    }
+  });
+
+  scrollTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Featured Cards Animation
+  const featuredObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, index * 150);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.featured-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(50px)';
+    card.style.transition = 'all 0.8s ease';
+    featuredObserver.observe(card);
+  });
+
+
+</script>

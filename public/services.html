@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Wedner Events and Production</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+  /* === Services Section with Cinematic Background === */
+  .services-section {
+    position: relative;
+    padding: 6rem 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('img/Gallery/10.jpg') center center/cover no-repeat fixed;
+    overflow: hidden;
+  }
+
+  .section-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-title h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ffcc00, #ff00cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-title p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  /* === Grid Layout === */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  /* === Service Cards === */
+  .service-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(255, 204, 0, 0.3);
+  }
+
+  /* === Service Image === */
+  .service-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .service-card:hover .service-image img {
+    transform: scale(1.1);
+  }
+
+  /* === Overlay & Icon === */
+  .service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 204, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .service-card:hover .service-overlay {
+    opacity: 1;
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 204, 0, 0.9);
+  }
+
+  /* === Content === */
+  .service-content {
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+
+  .service-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: #ffcc00;
+  }
+
+  .service-content p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.5rem;
+  }
+
+  /* === Button === */
+  .service-btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ffcc00, #ff00cc);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .service-btn:hover {
+    background: linear-gradient(90deg, #ff00cc, #ffcc00);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+  }
+
+  /* === Responsive === */
+  @media (max-width: 768px) {
+    .services-section {
+      padding: 4rem 5%;
+    }
+
+    .service-content h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .cta-section {
+    position: relative;
+    background: url('img/Gallery/9.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+
+  /* Dark overlay for readability */
+  .cta-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* semi-transparent dark overlay */
+    z-index: 0;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Heading and Paragraph */
+  .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  /* Buttons */
+  .cta-buttons .btn {
+    margin: 5px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  /* Primary Button */
+  .cta-buttons .btn-primary {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+  }
+
+  .cta-buttons .btn-primary:hover {
+    background-color: #e84118;
+  }
+
+  /* Secondary Button */
+  .cta-buttons .btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+  }
+
+  .cta-buttons .btn-secondary:hover {
+    background-color: white;
+    color: #333;
+  }
+</style>
+
+<body>
+  <div class="bg-animation"></div>
+  <div class="particles" id="particles"></div>
+
+  <header id="header">
+    <div class="header-container">
+      <!-- Logo + Name -->
+      <a href="index.html" class="logo">
+        <img src="img/testimonials/logo.png" alt="Wedner Events & Production Logo" class="logo-img">
+        <span class="logo-text">Wedner Events & Production</span>
+      </a>
+
+
+
+      <!-- Navigation -->
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="team.html">Team</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Icon -->
+      <i class="fas fa-bars menu-icon" id="menuIcon"></i>
+    </div>
+  </header>
+  <section class="page-header"
+    style="background: url('img/Gallery/np.jpg') no-repeat center center/cover; color: white; text-align: center;">
+    <h1>Our Premium Services</h1>
+    <p>Comprehensive Event Solutions Tailored to Your Vision</p>
+  </section>
+
+
+  <section class="services-section">
+    <div class="services-grid">
+      <!-- Wedding Events -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="img/Gallery/9.jpg" alt="Wedding Events">
+          <div class="service-overlay">
+            <i class="fas fa-ring service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Wedding Events</h3>
+          <p>Create the wedding of your dreams with our comprehensive planning and coordination services. From intimate
+            ceremonies to grand celebrations, we handle every detail with care.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Complete wedding planning & coordination</li>
+            <li><i class="fas fa-check-circle"></i> Venue selection & decoration</li>
+            <li><i class="fas fa-check-circle"></i> Catering & menu customization</li>
+            <li><i class="fas fa-check-circle"></i> Photography & videography</li>
+            <li><i class="fas fa-check-circle"></i> Entertainment & music arrangements</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Corporate Events -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="img/Gallery/carporate.jpg" alt="Corporate Events">
+          <div class="service-overlay">
+            <i class="fas fa-briefcase service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Corporate Events</h3>
+          <p>Professional event management for conferences, seminars, product launches, and team building activities
+            that leave lasting impressions on your stakeholders.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Conference & seminar management</li>
+            <li><i class="fas fa-check-circle"></i> Product launch events</li>
+            <li><i class="fas fa-check-circle"></i> Team building activities</li>
+            <li><i class="fas fa-check-circle"></i> Corporate gatherings & parties</li>
+            <li><i class="fas fa-check-circle"></i> Audio-visual & tech support</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Birthday Parties -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="img/Gallery/3.jpg" alt="Birthday Parties">
+          <div class="service-overlay">
+            <i class="fas fa-birthday-cake service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Birthday Parties</h3>
+          <p>Celebrate life's special moments with themed birthday parties tailored for all ages. From kids' parties to
+            milestone celebrations, we make every birthday unforgettable.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Custom themed decorations</li>
+            <li><i class="fas fa-check-circle"></i> Entertainment & games</li>
+            <li><i class="fas fa-check-circle"></i> Cake & catering services</li>
+            <li><i class="fas fa-check-circle"></i> Photography packages</li>
+            <li><i class="fas fa-check-circle"></i> Party favors & gifts</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Fashion Shows -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="img/Gallery/fashionshow.jpg" alt="Fashion Shows">
+          <div class="service-overlay">
+            <i class="fas fa-crown service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Fashion Shows</h3>
+          <p>Dynamic runway presentations and live concept events that showcase fashion in its finest form. We bring
+            creativity and professionalism to every fashion event.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Runway design & setup</li>
+            <li><i class="fas fa-check-circle"></i> Model coordination</li>
+            <li><i class="fas fa-check-circle"></i> Lighting & stage management</li>
+            <li><i class="fas fa-check-circle"></i> Backstage organization</li>
+            <li><i class="fas fa-check-circle"></i> Media & PR coordination</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Sound & Lights -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800" alt="Sound & Lights">
+          <div class="service-overlay">
+            <i class="fas fa-music service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Sound & Lights</h3>
+          <p>State-of-the-art audio-visual solutions that create immersive experiences. Professional sound systems and
+            creative lighting designs for any event size.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Professional sound systems</li>
+            <li><i class="fas fa-check-circle"></i> Creative lighting designs</li>
+            <li><i class="fas fa-check-circle"></i> LED screens & projectors</li>
+            <li><i class="fas fa-check-circle"></i> DJ & music services</li>
+            <li><i class="fas fa-check-circle"></i> Technical support team</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Catering Services -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="img/Gallery/catoring.jpg" alt="Catering Services">
+          <div class="service-overlay">
+            <i class="fas fa-utensils service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Catering Services</h3>
+          <p>Exquisite culinary experiences with diverse menu options and exceptional presentation. From traditional to
+            contemporary cuisines, we serve excellence.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Customized menu planning</li>
+            <li><i class="fas fa-check-circle"></i> Multi-cuisine options</li>
+            <li><i class="fas fa-check-circle"></i> Professional service staff</li>
+            <li><i class="fas fa-check-circle"></i> Buffet & plated service</li>
+            <li><i class="fas fa-check-circle"></i> Special dietary accommodations</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <!-- Live Concerts -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800" alt="Live Concerts">
+          <div class="service-overlay">
+            <i class="fas fa-guitar service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Live Concerts</h3>
+          <p>Electrifying concert experiences with professional stage setup, sound systems, and crowd management. We
+            handle everything from artist coordination to audience engagement.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Stage design & construction</li>
+            <li><i class="fas fa-check-circle"></i> Professional sound systems</li>
+            <li><i class="fas fa-check-circle"></i> Artist & performer coordination</li>
+            <li><i class="fas fa-check-circle"></i> Crowd control & security</li>
+            <li><i class="fas fa-check-circle"></i> Ticketing & entry management</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Stage Decoration -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="img/Gallery/5.jpg" alt="Stage Decoration">
+          <div class="service-overlay">
+            <i class="fas fa-theater-masks service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Stage Decoration</h3>
+          <p>Stunning stage designs that create the perfect backdrop for your event. From elegant floral arrangements to
+            modern themed setups, we craft visual masterpieces.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Custom theme designs</li>
+            <li><i class="fas fa-check-circle"></i> Floral arrangements</li>
+            <li><i class="fas fa-check-circle"></i> Backdrop & draping</li>
+            <li><i class="fas fa-check-circle"></i> Props & accessories</li>
+            <li><i class="fas fa-check-circle"></i> Lighting integration</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Haldi Decoration -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="img/Gallery/haldi.jpg" alt="Haldi Decoration">
+          <div class="service-overlay">
+            <i class="fas fa-spa service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Haldi Decoration</h3>
+          <p>Vibrant and traditional Haldi ceremony decorations with authentic marigold flowers, colorful drapes, and
+            traditional elements that celebrate this auspicious occasion.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Marigold flower arrangements</li>
+            <li><i class="fas fa-check-circle"></i> Traditional seating setups</li>
+            <li><i class="fas fa-check-circle"></i> Colorful drapes & fabrics</li>
+            <li><i class="fas fa-check-circle"></i> Photo booth areas</li>
+            <li><i class="fas fa-check-circle"></i> Traditional props & decor</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Bride-Groom Entry -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800" alt="Bride Groom Entry">
+          <div class="service-overlay">
+            <i class="fas fa-heart service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Bride-Groom Entry</h3>
+          <p>Grand and memorable entry arrangements for the bride and groom with special effects, music, lighting, and
+            creative concepts that make their entrance unforgettable.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Custom entry concepts</li>
+            <li><i class="fas fa-check-circle"></i> Special lighting effects</li>
+            <li><i class="fas fa-check-circle"></i> Music synchronization</li>
+            <li><i class="fas fa-check-circle"></i> Fog & pyro effects</li>
+            <li><i class="fas fa-check-circle"></i> Floral pathways</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Balloon Decoration -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800" alt="Balloon Decoration">
+          <div class="service-overlay">
+            <i class="fas fa-balloon service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Balloon Decoration</h3>
+          <p>Creative balloon artistry that adds color and fun to any celebration. From elegant balloon arches to
+            whimsical sculptures, we create magical balloon displays.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Balloon arches & columns</li>
+            <li><i class="fas fa-check-circle"></i> Custom balloon sculptures</li>
+            <li><i class="fas fa-check-circle"></i> Themed balloon arrangements</li>
+            <li><i class="fas fa-check-circle"></i> Ceiling balloon decorations</li>
+            <li><i class="fas fa-check-circle"></i> LED light balloons</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- College Festival -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="img/Gallery/collage.jpg" alt="College Festival">
+          <div class="service-overlay">
+            <i class="fas fa-graduation-cap service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>College Festival</h3>
+          <p>Complete management of college fests, cultural events, and annual days. We bring energy and professionalism
+            to student celebrations with engaging activities and seamless execution.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Cultural event management</li>
+            <li><i class="fas fa-check-circle"></i> Competition coordination</li>
+            <li><i class="fas fa-check-circle"></i> Celebrity artist booking</li>
+            <li><i class="fas fa-check-circle"></i> Stage & sound setup</li>
+            <li><i class="fas fa-check-circle"></i> Student activity coordination</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Launching Events -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800" alt="Launching Events">
+          <div class="service-overlay">
+            <i class="fas fa-rocket service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Launching Events</h3>
+          <p>Impactful product and service launch events that create buzz and leave lasting impressions. Strategic
+            planning meets creative execution for successful launches.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Product showcase setup</li>
+            <li><i class="fas fa-check-circle"></i> Media & PR coordination</li>
+            <li><i class="fas fa-check-circle"></i> Branding & visual identity</li>
+            <li><i class="fas fa-check-circle"></i> Guest management</li>
+            <li><i class="fas fa-check-circle"></i> Interactive displays</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+
+      <!-- Government Function -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800" alt="Government Function">
+          <div class="service-overlay">
+            <i class="fas fa-landmark service-icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Government Functions</h3>
+          <p>Professional management of government ceremonies, official events, and public functions with strict
+            protocol adherence and dignified execution.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Protocol management</li>
+            <li><i class="fas fa-check-circle"></i> VIP guest coordination</li>
+            <li><i class="fas fa-check-circle"></i> Security arrangements</li>
+            <li><i class="fas fa-check-circle"></i> Official ceremony setup</li>
+            <li><i class="fas fa-check-circle"></i> Documentation & coverage</li>
+          </ul>
+          <a href="contact.html" class="service-btn">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Plan Your Event?</h2>
+      <p>Let's discuss your vision and create an unforgettable experience together. Our team is ready to bring your
+        ideas to life.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+        <a href="gallery.html" class="btn btn-secondary">View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Wedner Events</h3>
+        <p>Creating unforgettable moments since 2010</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p>
+          <a href="/" style="color: #f7f9fb; text-decoration: none; margin: 0 10px;">Home</a> |
+          <a href="/services.html" style="color: #f7f8f9; text-decoration: none; margin: 0 10px;">Services</a> |
+          <a href="/gallery.html" style="color: #f0f2f5; text-decoration: none; margin: 0 10px;">Gallery</a> |
+          <a href="/contact.html" style="color: #f1f3f5; text-decoration: none; margin: 0 10px;">Contact</a>
+        </p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/p/Wedner-Events-Production-100047288066072/" class="social-icon"
+            target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/wedner_events_production/" class="social-icon" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/9156161444" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:wednerevents@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2024 Wedner Events & DigitalCraft Studio. All Rights Reserved.</p>
+  </footer>
+
+  <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Particles
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 20 + 's';
+      particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      particlesContainer.appendChild(particle);
+    }
+
+    // Mobile Menu
+    const menuIcon = document.getElementById('menuIcon');
+    const nav = document.getElementById('nav');
+    menuIcon.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
+    });
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll to Top
+    const scrollTop = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTop.classList.add('show');
+      } else {
+        scrollTop.classList.remove('show');
+      }
+    });
+
+    scrollTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Service Cards Animation
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 150);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(50px)';
+      card.style.transition = 'all 0.8s ease';
+      observer.observe(card);
+    });
+  </script>
+</body>
+
+</html>

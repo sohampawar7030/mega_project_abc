@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Wedner Events and Production</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src=""></script>
+</head>
+
+<body>
+  <div class="bg-animation"></div>
+  <div class="particles" id="particles"></div>
+
+  <header id="header">
+    <div class="header-container">
+      <!-- Logo + Name -->
+      <a href="index.html" class="logo">
+        <img src="img/testimonials/logo.png" alt="Wedner Events & Production Logo" class="logo-img">
+        <span class="logo-text">Wedner Events & Production</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="team.html">Team</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Icon -->
+      <i class="fas fa-bars menu-icon" id="menuIcon"></i>
+    </div>
+  </header>
+
+  <section class="page-header"
+    style="background: url('img/Gallery/7.jpg') no-repeat center center; background-size: cover;">
+    <h1>Get In Touch</h1>
+    <p>Let's Create Something Amazing Together</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-card-header">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Call Us</h3>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:9156161444">+91 9156161444</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:9090638118">+91 9090638118</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-header">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email Us</h3>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:wednerevents@gmail.com">wednerevents@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:shindeganeshh1499@gmail.com">shindeganeshh1499@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-header">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Visit Us</h3>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Vighnaharta Vastu C-Wing</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-location-dot"></i>
+              <span>Ambegaon B.K, Pune 411046</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-city"></i>
+              <span>Maharashtra, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-header">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Working Hours</h3>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-calendar-week"></i>
+              <span>Monday - Saturday: 9:00 AM - 8:00 PM</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-calendar-day"></i>
+              <span>Sunday: 10:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <h2 class="form-title">Send Us A Message</h2>
+        <div class="success-message" id="successMessage">
+          <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. We'll get back to you
+          soon!
+        </div>
+        <div class="error-message" id="errorMessage">
+          <i class="fas fa-exclamation-circle"></i> <span id="errorText">Something went wrong. Please try again.</span>
+        </div>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="form-group">
+              <label for="event">Event Type *</label>
+              <select id="event" name="event" required>
+                <option value="">Select Event Type</option>
+                <option value="wedding">Wedding</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="fashion">Fashion Show</option>
+                <option value="conference">Conference</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Event Date</label>
+            <input type="date" id="date" name="date">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message *</label>
+            <textarea id="message" name="message" required
+              placeholder="Tell us about your event requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div class="section-title">
+      <h2>Find Us On Map</h2>
+      <p>Visit Our Office</p>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.649293962716!2d73.83603912465068!3d18.454225921198436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc29519d28a17c5%3A0x2627d9a9cd9ebafb!2sVighnaharta%20Vastu!5e0!3m2!1sen!2sin!4v1711306941495!5m2!1sen!2sin"
+        allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section class="social-connect">
+    <div class="section-title">
+      <h2>Connect With Us</h2>
+      <p>Follow Us On Social Media</p>
+    </div>
+    <div class="social-grid">
+      <a href="https://www.instagram.com/wedner_events_production/" target="_blank" class="social-card">
+        <div class="social-card-icon">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <h3>Instagram</h3>
+        <p>@wedner_events_production</p>
+      </a>
+
+      <a href="https://www.facebook.com/wednerevents" target="_blank" class="social-card">
+        <div class="social-card-icon">
+          <i class="fab fa-facebook"></i>
+        </div>
+        <h3>Facebook</h3>
+        <p>Wedner Events & Production</p>
+      </a>
+
+      <a href="https://wa.me/919156161444" target="_blank" class="social-card">
+        <div class="social-card-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <h3>WhatsApp</h3>
+        <p>+91 9156161444</p>
+      </a>
+
+      <a href="mailto:wednerevents@gmail.com" class="social-card">
+        <div class="social-card-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email</h3>
+        <p>wednerevents@gmail.com</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Wedner Events</h3>
+        <p>Creating unforgettable moments through exceptional event planning and production services.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a></p>
+        <p><a href="services.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Services</a></p>
+        <p><a href="team.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Team</a></p>
+      </div>
+      <div>
+        <h3>Contact Info</h3>
+        <p>Email: wednerevents@gmail.com</p>
+        <p>Phone: +91 9090638118</p>
+        <p>Location: Pune, Maharashtra</p>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/wedner_events_production/" target="_blank" class="social-icon"><i
+          class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/wednerevents" target="_blank" class="social-icon"><i
+          class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/919156161444" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:wednerevents@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p style="margin-top: 2rem; opacity: 0.7;">&copy; 2025 Wedner Events and Production. All Rights Reserved.</p>
+    <p style="margin-top: 2rem; opacity: 0.7;">Developed By @SohamPawar</p>
+  </footer>
+
+  <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // BACKEND SERVER URL - Change this to your actual server URL when deployed
+    const SERVER_URL = 'http://localhost:3000';
+
+    // Particles animation
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 20 + 's';
+      particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+      particlesContainer.appendChild(particle);
+    }
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuIcon = document.getElementById('menuIcon');
+    const nav = document.getElementById('nav');
+    menuIcon.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-times');
+    });
+
+    // Scroll to top button
+    const scrollTop = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTop.classList.add('show');
+      } else {
+        scrollTop.classList.remove('show');
+      }
+    });
+
+    scrollTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Form submission with backend integration
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+    const submitBtn = contactForm.querySelector('.btn-submit');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Get form values
+      const formData = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        event: document.getElementById('event').value,
+        date: document.getElementById('date').value,
+        message: document.getElementById('message').value.trim()
+      };
+
+      // Validation
+      if (!formData.name || !formData.email || !formData.phone || !formData.event || !formData.message) {
+        showError('Please fill in all required fields!');
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        showError('Please enter a valid email address!');
+        return;
+      }
+
+      // Phone validation
+      const phoneRegex = /^[0-9+\s-]{10,}$/;
+      if (!phoneRegex.test(formData.phone)) {
+        showError('Please enter a valid phone number!');
+        return;
+      }
+
+      // Show loading state
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitBtn.disabled = true;
+
+      try {
+        // Send data to backend
+        const response = await fetch(`${SERVER_URL}/send-email`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          // Success
+          submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+          showSuccess();
+          contactForm.reset();
+
+          setTimeout(() => {
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            submitBtn.disabled = false;
+          }, 2000);
+        } else {
+          // Error from backend
+          throw new Error(result.message || 'Failed to send message');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showError(error.message || 'Failed to send message. Please try again or contact us directly.');
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        submitBtn.disabled = false;
+      }
+    });
+
+    function showSuccess() {
+      successMessage.classList.add('show');
+      errorMessage.classList.remove('show');
+
+      setTimeout(() => {
+        successMessage.classList.remove('show');
+      }, 5000);
+
+      successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function showError(message) {
+      document.getElementById('errorText').textContent = message;
+      errorMessage.classList.add('show');
+      successMessage.classList.remove('show');
+
+      setTimeout(() => {
+        errorMessage.classList.remove('show');
+      }, 5000);
+
+      errorMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Animate contact cards on scroll
+    const contactCards = document.querySelectorAll('.contact-card');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 150);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    contactCards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(50px)';
+      card.style.transition = 'all 0.8s ease';
+      cardObserver.observe(card);
+    });
+
+    // Animate form on scroll
+    const formWrapper = document.querySelector('.contact-form-wrapper');
+    const formObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.2 });
+
+    formWrapper.style.opacity = '0';
+    formWrapper.style.transform = 'translateY(50px)';
+    formWrapper.style.transition = 'all 0.8s ease';
+    formObserver.observe(formWrapper);
+
+    // Animate social cards on scroll
+    const socialCards = document.querySelectorAll('.social-card');
+    const socialObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 100);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    socialCards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'all 0.6s ease';
+      socialObserver.observe(card);
+    });
+
+    // Set minimum date for event date picker to today
+    const dateInput = document.getElementById('date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+
+    // Add input validation hints
+    const inputs = document.querySelectorAll('input[required], textarea[required], select[required]');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        if (!input.value) {
+          input.style.borderColor = '#ef4444';
+        } else {
+          input.style.borderColor = 'rgba(223, 234, 10, 0.2)';
+        }
+      });
+
+      input.addEventListener('focus', () => {
+        input.style.borderColor = 'var(--primary)';
+      });
+    });
+
+    // Phone number formatting
+    const phoneInput = document.getElementById('phone');
+    phoneInput.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 10) {
+        value = value.slice(0, 10);
+      }
+      e.target.value = value;
+    });
+
+    // Add character counter to message textarea
+    const messageTextarea = document.getElementById('message');
+    const messageGroup = messageTextarea.parentElement;
+    const counter = document.createElement('div');
+    counter.style.cssText = 'color: rgba(255,255,255,0.5); font-size: 0.9rem; text-align: right; margin-top: 0.5rem;';
+    messageGroup.appendChild(counter);
+
+    messageTextarea.addEventListener('input', () => {
+      const length = messageTextarea.value.length;
+      counter.textContent = `${length} characters`;
+      if (length > 500) {
+        counter.style.color = '#ef4444';
+      } else {
+        counter.style.color = 'rgba(255,255,255,0.5)';
+      }
+    });
+
+    // Add hover effect to map
+    const mapIframe = document.querySelector('.map-container iframe');
+    mapIframe.addEventListener('mouseenter', () => {
+      mapIframe.style.filter = 'grayscale(0%) brightness(1)';
+      mapIframe.style.transition = 'all 0.3s ease';
+    });
+
+    mapIframe.addEventListener('mouseleave', () => {
+      mapIframe.style.filter = 'grayscale(20%) brightness(0.9)';
+    });
+
+    // Add ripple effect to buttons
+    submitBtn.addEventListener('click', function (e) {
+      if (this.disabled) return;
+
+      const ripple = document.createElement('span');
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+
+      ripple.style.cssText = `
+        position: absolute;
+        width: ${size}px;
+        height: ${size}px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        top: ${y}px;
+        left: ${x}px;
+        transform: scale(0);
+        animation: ripple 0.6s ease-out;
+        pointer-events: none;
+      `;
+
+      this.style.position = 'relative';
+      this.style.overflow = 'hidden';
+      this.appendChild(ripple);
+
+      setTimeout(() => ripple.remove(), 600);
+    });
+
+    // Add CSS animation for ripple
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      
+      .error-message {
+        display: none;
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        align-items: center;
+        gap: 0.5rem;
+        animation: slideDown 0.3s ease;
+      }
+      
+      .error-message.show {
+        display: flex;
+      }
+      
+      .error-message i {
+        font-size: 1.2rem;
+      }
+      
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Console welcome message
+    console.log('%c🎉 Welcome to Wedner Events! 🎉', 'font-size: 20px; font-weight: bold; color: #dfea0a;');
+    console.log('%cWe create unforgettable moments!', 'font-size: 14px; color: #c239b3;');
+    console.log('%c📧 Email system is integrated and ready!', 'font-size: 12px; color: #667eea;');
+  </script>
+</body>
+
+</html>

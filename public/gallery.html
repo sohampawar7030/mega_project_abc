@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Wedner Events and Production</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="bg-animation"></div>
+  <div class="particles" id="particles"></div>
+
+  <header id="header">
+    <div class="header-container">
+      <!-- Logo + Name -->
+      <a href="index.html" class="logo">
+        <img src="img/testimonials/logo.png" alt="Wedner Events & Production Logo" class="logo-img">
+        <span class="logo-text">Wedner Events & Production</span>
+      </a>
+
+
+      <!-- Navigation -->
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="team.html">Team</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Icon -->
+      <i class="fas fa-bars menu-icon" id="menuIcon"></i>
+    </div>
+  </header>
+
+  <section class="page-header"
+    style="background: url('img/Gallery/6.jpg') no-repeat center center; background-size: cover;">
+    <h1>Event Gallery</h1>
+    <p>Moments We've Created & Memories We've Captured</p>
+
+
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All Events</button>
+      <button class="filter-btn" data-filter="wedding">Weddings</button>
+      <button class="filter-btn" data-filter="corporate">Corporate</button>
+      <button class="filter-btn" data-filter="birthday">Birthdays</button>
+      <button class="filter-btn" data-filter="fashion">Fashion Shows</button>
+      <button class="filter-btn" data-filter="other">Other Events</button>
+    </div>
+  </section>
+
+  <section class="gallery-section"
+    style="background: url('img/Gallery/2.jpg') no-repeat center center; background-size: cover;">
+    <div class="gallery-grid">
+      <!-- Wedding Photos -->
+      <div class="gallery-item" data-category="wedding">
+        <img src="img/Gallery/bg.jpg" alt="Wedding Event 1">
+        <div class="gallery-overlay">
+          <h3>Elegant Wedding</h3>
+          <p>Grand Celebration</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="wedding">
+        <img src="img/Gallery/weeding1.jpg" alt="Wedding Event 2">
+        <div class="gallery-overlay">
+          <h3>Dream Wedding</h3>
+          <p>Romantic Setup</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="wedding">
+        <img src="img/Gallery/weeding4.jpg" alt="Wedding Event 3">
+        <div class="gallery-overlay">
+          <h3>Beautiful Ceremony</h3>
+          <p>Perfect Moments</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <!-- Corporate Events -->
+      <div class="gallery-item" data-category="corporate">
+        <img src="img/Gallery/carporate.jpg" alt="Corporate Event 1">
+        <div class="gallery-overlay">
+          <h3>Corporate Conference</h3>
+          <p>Professional Setup</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="corporate">
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800" alt="Corporate Event 2">
+        <div class="gallery-overlay">
+          <h3>Business Summit</h3>
+          <p>Executive Meeting</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="corporate">
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800" alt="Corporate Event 3">
+        <div class="gallery-overlay">
+          <h3>Product Launch</h3>
+          <p>Innovation Event</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <!-- Birthday Parties -->
+      <div class="gallery-item" data-category="birthday">
+        <img src="img/Gallery/b1.jpg" alt="Birthday Party 1">
+        <div class="gallery-overlay">
+          <h3>Kids Birthday</h3>
+          <p>Fun & Colors</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="birthday">
+        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800" alt="Birthday Party 2">
+        <div class="gallery-overlay">
+          <h3>Birthday Celebration</h3>
+          <p>Memorable Day</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="birthday">
+        <img src="img/Gallery/b3.jpg" alt="Birthday Party 3">
+        <div class="gallery-overlay">
+          <h3>Special Milestone</h3>
+          <p>Themed Party</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <!-- Fashion Shows -->
+      <div class="gallery-item" data-category="fashion">
+        <img src="img/Gallery/fashionshow.jpg" alt="Fashion Show 1">
+        <div class="gallery-overlay">
+          <h3>Runway Event</h3>
+          <p>Fashion Excellence</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="fashion">
+        <img src="img/Gallery/fashonshow2.jpg" alt="Fashion Show 2">
+        <div class="gallery-overlay">
+          <h3>Designer Showcase</h3>
+          <p>Style & Glamour</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="fashion">
+        <img src="img/Gallery/fashion3.jpg" alt="Fashion Show 3">
+        <div class="gallery-overlay">
+          <h3>Fashion Week</h3>
+          <p>Premium Collection</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <!-- Other Events -->
+      <div class="gallery-item" data-category="other">
+        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800" alt="Other Event 1">
+        <div class="gallery-overlay">
+          <h3>Concert Night</h3>
+          <p>Live Music</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="other">
+        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=800" alt="Other Event 2">
+        <div class="gallery-overlay">
+          <h3>Gala Dinner</h3>
+          <p>Fine Dining</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="other">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800" alt="Other Event 3">
+        <div class="gallery-overlay">
+          <h3>Award Ceremony</h3>
+          <p>Recognition Event</p>
+          <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <div class="lightbox-close" onclick="closeLightbox()">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="lightbox-prev lightbox-nav" onclick="changeLightboxImage(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <img src="" alt="Gallery Image" id="lightbox-img">
+      <div class="lightbox-next lightbox-nav" onclick="changeLightboxImage(1)">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="lightbox-info">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Wedner Events</h3>
+        <p>Creating unforgettable moments since 2010</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p>
+          <a href="/" style="color: #f7f9fb; text-decoration: none; margin: 0 10px;">Home</a> |
+          <a href="/services.html" style="color: #f7f8f9; text-decoration: none; margin: 0 10px;">Services</a> |
+          <a href="/gallery.html" style="color: #f0f2f5; text-decoration: none; margin: 0 10px;">Gallery</a> |
+          <a href="/contact.html" style="color: #f1f3f5; text-decoration: none; margin: 0 10px;">Contact</a>
+
+        </p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/p/Wedner-Events-Production-100047288066072/" class="social-icon"
+            target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/wedner_events_production/" class="social-icon" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/9156161444" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:wednerevents@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2024 Wedner Events & DigitalCraft Studio. All Rights Reserved.</p>
+  </footer>
+
+  <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Particles
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 20 + 's';
+      particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      particlesContainer.appendChild(particle);
+    }
+
+    // Mobile Menu
+    const menuIcon = document.getElementById('menuIcon');
+    const nav = document.getElementById('nav');
+    menuIcon.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
+    });
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll to Top
+    const scrollTop = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTop.classList.add('show');
+      } else {
+        scrollTop.classList.remove('show');
+      }
+    });
+
+    scrollTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Filter Functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          if (filterValue === 'all') {
+            item.classList.remove('hide');
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            }, 100);
+          } else {
+            if (item.getAttribute('data-category') === filterValue) {
+              item.classList.remove('hide');
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+              }, 100);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.8)';
+              setTimeout(() => {
+                item.classList.add('hide');
+              }, 300);
+            }
+          }
+        });
+      });
+    });
+
+    // Lightbox Functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    let currentImageIndex = 0;
+    let visibleImages = [];
+
+    function updateVisibleImages() {
+      visibleImages = Array.from(galleryItems).filter(item => !item.classList.contains('hide'));
+    }
+
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        updateVisibleImages();
+        currentImageIndex = visibleImages.indexOf(item);
+        openLightbox(item);
+      });
+    });
+
+    function openLightbox(item) {
+      const img = item.querySelector('img');
+      const title = item.querySelector('h3').textContent;
+      const desc = item.querySelector('p').textContent;
+
+      lightboxImg.src = img.src;
+      lightboxTitle.textContent = title;
+      lightboxDesc.textContent = desc;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function changeLightboxImage(direction) {
+      currentImageIndex += direction;
+
+      if (currentImageIndex < 0) {
+        currentImageIndex = visibleImages.length - 1;
+      } else if (currentImageIndex >= visibleImages.length) {
+        currentImageIndex = 0;
+      }
+
+      openLightbox(visibleImages[currentImageIndex]);
+    }
+
+    // Close lightbox on background click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('active')) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          changeLightboxImage(-1);
+        } else if (e.key === 'ArrowRight') {
+          changeLightboxImage(1);
+        }
+      }
+    });
+
+    // Gallery Items Animation
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'scale(1)';
+          }, index * 100);
+        }
+      });
+    }, observerOptions);
+
+    galleryItems.forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'scale(0.8)';
+      item.style.transition = 'all 0.6s ease';
+      observer.observe(item);
+    });
+
+    // Initialize visible images
+    updateVisibleImages();
+  </script>
+</body>
+
+</html>

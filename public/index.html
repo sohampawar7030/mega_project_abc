@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedner Events and Production - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="/js/script.js"></script>
+
+  <style>
+    :root {
+      --primary: #dfea0a;
+      --accent: #ffdd00;
+      --secondary: #ffae00;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background: url('img/Gallery/1.jpg') center center/cover no-repeat;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right,
+          rgba(26, 26, 46, 0.3),
+          rgba(10, 10, 20, 0.3));
+      z-index: 1;
+    }
+
+    .hero-content {
+      text-align: center;
+      color: white;
+      z-index: 2;
+      max-width: 900px;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+      opacity: 0.95;
+      font-weight: 300;
+    }
+
+    /* STATS SECTION */
+    .stats {
+      position: relative;
+      padding: 6rem 8%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      background: url('img/Gallery/6.jpg') center center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    .stats::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 20, 0.3);
+      /* reduced overlay for clarity */
+      z-index: 1;
+    }
+
+    .stat-item {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(223, 234, 10, 0.1);
+      backdrop-filter: blur(5px);
+      transition: all 0.4s;
+    }
+
+    .stat-item:hover {
+      background: rgba(223, 234, 10, 0.05);
+      transform: translateY(-15px);
+      box-shadow: 0 15px 40px rgba(223, 234, 10, 0.2);
+      border-color: var(--primary);
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+
+    /* FEATURED SECTION */
+    .featured {
+      position: relative;
+      padding: 6rem 8%;
+      background: url('img/Gallery/9.jpg') center center/cover no-repeat;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .featured::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 20, 0.3);
+      /* reduced overlay for clarity */
+      z-index: 1;
+    }
+
+    .featured .section-title,
+    .featured .featured-grid {
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-title h2 {
+      font-size: 3.5rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      text-shadow: 0 0 20px rgba(223, 234, 10, 0.3);
+    }
+
+    .section-title p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .featured-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3rem;
+      border-radius: 25px;
+      border: 1px solid rgba(223, 234, 10, 0.1);
+      transition: all 0.4s;
+      text-align: center;
+    }
+
+    .featured-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 50px rgba(223, 234, 10, 0.3);
+      border-color: var(--primary);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .featured-icon {
+      font-size: 4rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .featured-card:hover .featured-icon {
+      transform: scale(1.2) rotate(10deg);
+    }
+
+    .featured-card h3 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .featured-card p {
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="bg-animation"></div>
+  <div class="particles" id="particles"></div>
+
+  <header id="header">
+    <div class="header-container">
+      <!-- Logo + Name -->
+      <a href="index.html" class="logo">
+        <img src="img/testimonials/logo.png" alt="Wedner Events & Production Logo" class="logo-img">
+        <span class="logo-text">Wedner Events & Production</span>
+      </a>
+
+
+
+      <!-- Navigation -->
+      <nav id="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="team.html">Team</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Icon -->
+      <i class="fas fa-bars menu-icon" id="menuIcon"></i>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-overlay"></div> <!-- New overlay for better text contrast -->
+    <div class="hero-content">
+      <h1>Create Unforgettable Moments</h1>
+      <p>Transform Your Vision Into Extraordinary Reality</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Book Your Event</a>
+        <a href="services.html" class="btn btn-secondary">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="stats">
+    <div class="stat-item">
+      <div class="stat-number" data-target="500">0</div>
+      <div class="stat-label">Events Organized</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="1000">0</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="50">0</div>
+      <div class="stat-label">Expert Team</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="15">0</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+  </section>
+
+  <section class="featured">
+    <div class="section-title">
+      <h2>Why Choose Wedner Events</h2>
+      <p>Excellence, Creativity, and Dedication in Every Event</p>
+    </div>
+    <div class="featured-grid">
+      <div class="featured-card">
+        <i class="fas fa-award featured-icon"></i>
+        <h3>Award-Winning Excellence</h3>
+        <p>Recognized for delivering exceptional events with meticulous attention to detail and creative innovation that
+          exceeds expectations.</p>
+      </div>
+      <div class="featured-card">
+        <i class="fas fa-users featured-icon"></i>
+        <h3>Expert Team</h3>
+        <p>Our passionate professionals bring years of experience and creativity to make your event truly memorable and
+          stress-free.</p>
+      </div>
+      <div class="featured-card">
+        <i class="fas fa-star featured-icon"></i>
+        <h3>Premium Services</h3>
+        <p>From intimate gatherings to grand celebrations, we offer comprehensive event solutions tailored to your
+          unique vision.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Wedner Events</h3>
+        <p>Creating unforgettable moments since 2010</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p>
+          <a href="/" style="color: #f7f9fb; text-decoration: none; margin: 0 10px;">Home</a> |
+          <a href="/services.html" style="color: #f7f8f9; text-decoration: none; margin: 0 10px;">Services</a> |
+          <a href="/gallery.html" style="color: #f0f2f5; text-decoration: none; margin: 0 10px;">Gallery</a> |
+          <a href="/contact.html" style="color: #f1f3f5; text-decoration: none; margin: 0 10px;">Contact</a>
+        </p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/p/Wedner-Events-Production-100047288066072/" class="social-icon"
+            target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/wedner_events_production/" class="social-icon" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/9156161444" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:wednerevents@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2025 Wedner Events & Production. All Rights Reserved.</p>
+  </footer>
+
+  <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+</body>
+<script>
+  // Particles
+  const particlesContainer = document.getElementById('particles');
+  for (let i = 0; i < 50; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 20 + 's';
+    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+    particlesContainer.appendChild(particle);
+  }
+
+  // Mobile Menu
+  const menuIcon = document.getElementById('menuIcon');
+  const nav = document.getElementById('nav');
+  menuIcon.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
+
+  // Header Scroll Effect
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // Stats Counter
+  function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        element.textContent = Math.floor(current) + '+';
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target + '+';
+      }
+    };
+    updateCounter();
+  }
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-number').forEach(stat => {
+    statsObserver.observe(stat);
+  });
+
+  // Scroll to Top
+  const scrollTop = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollTop.classList.add('show');
+    } else {
+      scrollTop.classList.remove('show');
+    }
+  });
+
+  scrollTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Featured Cards Animation
+  const featuredObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, index * 150);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.featured-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(50px)';
+    card.style.transition = 'all 0.8s ease';
+    featuredObserver.observe(card);
+  });
+
+
+</script>
+
+</html>
