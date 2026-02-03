@@ -8,6 +8,13 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+/* ================= VERCEL SERVERLESS SUPPORT ================= */
+
+// IMPORTANT: Do NOT remove app.listen()
+// This export allows Vercel to use Express as a serverless function
+
+module.exports = app;
+
 /* ================= RATE LIMITING ================= */
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
