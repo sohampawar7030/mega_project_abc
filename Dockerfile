@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# safer npm install
+# safer npm install plz
 RUN npm install --production
 
 COPY . .
