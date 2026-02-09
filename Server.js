@@ -3,6 +3,7 @@ const path = require("path");
 const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 require("dotenv").config();
+const client = require("prom-client"); // Prometheus client
 
 const app = express();
 
@@ -97,11 +98,26 @@ app.get("/health", (req, res) => {
     });
 });
 
-/* ================= START SERVER ================= */
+/* ================= PROMETHEUS METRICS ================= */
+client.collectDefaultMetrics();
+
+const metricsApp = express();
+metricsApp.get("/metrics", async (req, res) => {
+    res.set("Content-Type", client.register.contentType);
+    res.end(await client.register.metrics());
+});
+
+/* ================= START SERVERS ================= */
 if (require.main === module) {
     const PORT = process.env.PORT || 3000;
+    const METRICS_PORT = process.env.METRICS_PORT || 9100;
+
     app.listen(PORT, () => {
         console.log(`🚀 Server running on port ${PORT}`);
+    });
+
+    metricsApp.listen(METRICS_PORT, () => {
+        console.log(`📊 Prometheus metrics available at http://localhost:${METRICS_PORT}/metrics`);
     });
 }
 
