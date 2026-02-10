@@ -1,6 +1,6 @@
 FROM node:20-alpine
 
-# OS security patches
+# OS security patche
 RUN apk update && apk upgrade --no-cache
 
 WORKDIR /app
